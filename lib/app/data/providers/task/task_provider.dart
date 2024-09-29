@@ -14,4 +14,8 @@ class TaskProvider {
         .forEach((task) => tasks.add(TaskModel.fromJson(task)));
     return tasks;
   }
+
+  void writeTasks(List<TaskModel> tasks){
+    _storage.write(AppKeys.taskKey, jsonEncode(tasks));
+  }
 }
