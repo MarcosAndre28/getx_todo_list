@@ -1,4 +1,4 @@
-class Icons {
+class IconsApp {
   static int personIcon = 0xe491;
   static int workIcon = 0xe11c;
   static int movieIcon = 0xe40f;
