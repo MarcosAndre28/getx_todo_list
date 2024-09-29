@@ -10,13 +10,8 @@ class TaskProvider {
 
   List<TaskModel> readTasks() {
     var tasks = <TaskModel>[];
-    jsonDecode(
-      _storage.read(AppKeys.taskKey).toString(),
-    ).forEach(
-      (task) => tasks.add(
-        TaskModel.fromJson(task),
-      ),
-    );
+    jsonDecode(_storage.read(AppKeys.taskKey).toString())
+        .forEach((task) => tasks.add(TaskModel.fromJson(task)));
     return tasks;
   }
 }
